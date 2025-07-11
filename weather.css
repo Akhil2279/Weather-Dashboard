@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  min-height: 100vh;
+  color: white;
+}
+
+.weather-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.temperature-display {
+  font-size: 5rem;
+  font-weight: 300;
+  position: relative;
+}
+
+.temperature-display::after {
+  content: "°C";
+  position: absolute;
+  font-size: 2rem;
+  top: 10px;
+}
+
+.weather-icon {
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+.hourly-forecast {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.3) transparent;
+}
+
+.hourly-forecast::-webkit-scrollbar {
+  height: 6px;
+}
+
+.hourly-forecast::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 3px;
+}
+
+.search-input {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  padding: 12px 20px;
+  color: white;
+}
+
+.search-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 30px;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.weather-detail-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
